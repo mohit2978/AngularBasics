@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './Component/AboutComponent/about.component';
 import { NavBarComponentComponent } from './Component/nav-bar-component/nav-bar-component.component';
+import { CustomTestModule } from './Module/custom.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavBarComponentComponent } from './Component/nav-bar-component/nav-bar-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CustomTestModule
   ],
   providers: [],
   bootstrap: [AppComponent]
