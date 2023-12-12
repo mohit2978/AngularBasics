@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './event-binding.component.css'
 })
 export class EventBindingComponent {
-
+   buttonclick(){
+    alert("clicked the button");
+   }
 }
