@@ -1,2 +1,6 @@
 <p>event-binding works!</p>
-<button (click)="buttonclick()">Click me</button>
+<button [ngStyle]="styleObj" (click)="buttonclick($event)">{{count}}</button>
+<hr>
+<input type="text" (keyup)="getValue($event)">
+<hr>
+<input type="text" #ip (keyup.enter)="getValueDirect(ip)">
