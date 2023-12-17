@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './Component/AboutComponent/about.component';
 import { NavBarComponentComponent } from './Component/nav-bar-component/nav-bar-component.component';
 import { CustomTestModule } from './Module/custom.module';
+import { ParCompoComponent } from './Component/par-compo/par-compo.component';
+import { ChildCompoComponent } from './Component/child-compo/child-compo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    NavBarComponentComponent
+    NavBarComponentComponent,
+    ParCompoComponent,
+    ChildCompoComponent
   ],
   imports: [
     BrowserModule,
