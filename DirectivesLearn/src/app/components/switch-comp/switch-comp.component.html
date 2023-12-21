@@ -1,11 +1,78 @@
 <div>
+  <select [(ngModel)]="n" name="num" >
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
 <div [ngSwitch]="n">
-    <div *ngSwitchCase="1">
+    <div *ngSwitchCase=" '1' ">
       <h2>One</h2>
     </div>
-    <div *ngSwitchCase="2">
+    <div *ngSwitchCase=" '2' ">
       <h2>two</h2>
     </div>
+    <div *ngSwitchCase=" '3' ">
+      <h2>three</h2>
+    </div>
+    <div *ngSwitchCase=" '4' ">
+      <h2>four</h2>
+    </div>
+    <div *ngSwitchDefault>
+      <h1> value is {{n}} </h1>
+      <h2>Default Case</h2>
+    </div>
 </div>
-    
+<select [(ngModel)]="number" name="number">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select> 
+<div [ngSwitch]="number">
+  
+  <div class="first" *ngSwitchCase="1">
+    <h2>One</h2>
+  </div>
+  <div class="first" *ngSwitchCase="2">
+    <h2>Two</h2>
+  </div>
+  <div class="first" *ngSwitchCase="3">
+    <h2>Three</h2>
+  </div>
+  <div class="first" *ngSwitchCase="4">
+    <h2>Four</h2>
+  </div>
+  <div class="first" *ngSwitchCase="5">
+    <h2>Five</h2>
+  </div>
+  <div class="first" *ngSwitchDefault>
+    <h2>Invalid Number selected</h2>
+  </div>
+</div>
+<select [(ngModel)]="page" name="number">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select> 
+
+@switch (page) {
+  @case (1) {
+    <p>Viewing content of first page</p>
+  }
+  @case (2) {
+    <p>Viewing content of second page</p>
+  }
+  @case (3) {
+    <p>Viewing content of third page</p>
+  }
+  @default {
+    <p>No page selected</p>
+ }
+}
 </div>
