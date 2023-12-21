@@ -1,0 +1,23 @@
+<div>
+    <h2>ng-for works</h2>
+    <table class="list" >
+        <thead>
+            <td>Index</td>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Phone NO</td>
+            <td>Branch</td>
+        </thead>
+        <tr *ngFor="let stu of students; let i=index;let f=first;let l=last;let e=even;let o=odd"
+        [ngClass]="{ even:e ,odd:o  }">
+            <td>{{i}}</td>
+            <td>{{stu.id}}</td>
+            <td>{{stu.name}}</td>
+            <td>{{stu.phone}}</td>
+            <td>{{stu.branch}}</td>
+        </tr>
+    </table>
+
+    <button (click)="addStudent()">Add</button>
+    <button (click)="removeStudent()">Remove</button>
+</div>
