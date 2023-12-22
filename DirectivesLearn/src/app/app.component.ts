@@ -5,13 +5,15 @@ import { NgForComponent } from './components/ng-for/ng-for.component';
 import { SwitchCompComponent } from './components/switch-comp/switch-comp.component';
 import { FormsModule } from '@angular/forms';
 import { NgIfCompComponent } from './components/ng-if-comp/ng-if-comp.component';
+import { NgClassComponent } from './ng-class/ng-class.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet,
     NgForComponent,SwitchCompComponent,FormsModule,
-    CommonModule,NgIfCompComponent],
+    CommonModule,NgIfCompComponent,NgClassComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
