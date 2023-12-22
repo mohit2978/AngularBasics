@@ -1,0 +1,32 @@
+<p>ng-if-comp works!</p>
+<!--<select [(ngModel)]="active">
+    <option value=true>true</option>
+    <option value=false>false</option>
+</select>
+-->
+<button (click)="changeactive()">Click here to change active</button>
+<div>
+    <div *ngIf=" active ;else elseBlock ">
+        <h2 >user is active</h2>
+    </div>
+</div>
+<ng-template #elseBlock>
+    <h2>user is not active</h2>
+</ng-template>
+
+<button (click)="incrCount()">Click here</button>
+<h2>value of count is {{count}}</h2>
+<div>
+    <div *ngIf=" count>=0 && count<=10  ">
+        <h2 >count between 0 and 10 bot inclusive</h2>
+    </div>
+    <div *ngIf=" count>=11 && count<=20 ">
+        <h2 >count between 11 and 20 bot inclusive</h2>
+    </div>
+    <div *ngIf=" count>=21 && count<=30 ">
+        <h2 >count between 21 and 30 bot inclusive</h2>
+    </div>
+    <div *ngIf="count < 0|| count > 30">
+        <h2>not in range kindly decrease the value</h2>
+      </div>
+</div>
