@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { NgIfCompComponent } from './components/ng-if-comp/ng-if-comp.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
+import { ParentCompComponent } from './components/parent-comp/parent-comp.component';
+import { ChildCompComponent } from './components/child-comp/child-comp.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,7 @@ import { NgStyleComponent } from './components/ng-style/ng-style.component';
   imports: [CommonModule, RouterOutlet,
     NgForComponent,SwitchCompComponent,FormsModule,
     CommonModule,NgIfCompComponent,NgClassComponent,
-    NgStyleComponent
+    NgStyleComponent,ParentCompComponent,ChildCompComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
