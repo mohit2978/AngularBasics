@@ -1,5 +1,8 @@
 <div class="container">
     <p>parent-comp works!</p>
-    <app-child-comp [counter]="45"></app-child-comp>
+    <app-child-comp [counter]="45" (customEventEmitter)="parentMethod($event)"></app-child-comp>
+    <h2>value of val is {{val}}</h2>
+    <h2 *ngIf="isEven">Value is even</h2>
+    <h2 *ngIf="!isEven">Value given is odd</h2>
 </div>
 
