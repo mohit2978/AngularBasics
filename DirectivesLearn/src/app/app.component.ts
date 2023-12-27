@@ -9,6 +9,7 @@ import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { ParentCompComponent } from './components/parent-comp/parent-comp.component';
 import { ChildCompComponent } from './components/child-comp/child-comp.component';
+import { ProfileComponent } from './facebook/profile/profile.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ import { ChildCompComponent } from './components/child-comp/child-comp.component
   imports: [CommonModule, RouterOutlet,
     NgForComponent,SwitchCompComponent,FormsModule,
     CommonModule,NgIfCompComponent,NgClassComponent,
-    NgStyleComponent,ParentCompComponent,ChildCompComponent
+    NgStyleComponent,ParentCompComponent,ChildCompComponent,ProfileComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
