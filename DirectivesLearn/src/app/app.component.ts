@@ -10,6 +10,7 @@ import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { ParentCompComponent } from './components/parent-comp/parent-comp.component';
 import { ChildCompComponent } from './components/child-comp/child-comp.component';
 import { ProfileComponent } from './facebook/profile/profile.component';
+import { PipesbasicsComponent } from './pipes/pipesbasics/pipesbasics.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { ProfileComponent } from './facebook/profile/profile.component';
   imports: [CommonModule, RouterOutlet,
     NgForComponent,SwitchCompComponent,FormsModule,
     CommonModule,NgIfCompComponent,NgClassComponent,
-    NgStyleComponent,ParentCompComponent,ChildCompComponent,ProfileComponent
+    NgStyleComponent,ParentCompComponent,ChildCompComponent,ProfileComponent,
+    PipesbasicsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -4,7 +4,7 @@ import { Person } from '../../models/person';
 @Component({
   selector: 'app-friend-list',
   standalone: true,
-  imports: [Person],
+  imports: [],
   templateUrl: './friend-list.component.html',
   styleUrl: './friend-list.component.css'
 })

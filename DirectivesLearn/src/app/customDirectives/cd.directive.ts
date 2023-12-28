@@ -4,5 +4,9 @@ import { Directive,OnInit,ElementRef,Input } from "@angular/core";
     selector : "[cdCustom]"
 })
 export class cdClass{
+  @Input()  customClass:string|undefined;
 
+  constructor(private ref:ElementRef){
+
+  }
 }
