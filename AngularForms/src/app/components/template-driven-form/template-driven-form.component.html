@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>Template Drive Form</h2>
+    <h2>User Registration Form</h2>
+  <form #userForm="ngForm" (ngSubmit)="formSubmitted(userForm)">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" name="name" placeholder="Enter name here" ngModel>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="text" placeholder="Enter email here" name="email" ngModel>
+            </td>
+        </tr>
+        <tr>
+            <td>Sex</td>
+            <td>
+                <input type="radio" name="gender" ngModel value="male">Male
+                <input type="radio" name="gender" ngModel value="female">FeMale
+            </td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>
+                <select>
+                    <option value="Delhi" name="city" ngModel>Delhi</option>
+                    <option value="Mumbai" name="city" ngModel>Mumbai</option>
+                    <option value="Chennai" name="city" ngModel>Chennai</option>
+                    <option value="Lucknow" name="city" ngModel>Lucknow</option>
+                </select>   
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </td>
+        </tr>
+    </table>
+  </form>
+  </div>
+  

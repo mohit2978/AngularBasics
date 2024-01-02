@@ -1,0 +1,23 @@
+<div>
+    <button (click)="getUsers()">Get Users</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>email</th>
+                <th>about</th>
+            </tr>
+           
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let user of users" >
+                <td>{{user.email}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.about}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button (click)="insertUsers()">Insert Users</button>
+</div>>
