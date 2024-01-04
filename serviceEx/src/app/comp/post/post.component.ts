@@ -12,8 +12,12 @@ import { CommonModule } from '@angular/common';
 })
 export class PostComponent {
     allpostsurl='https://jsonplaceholder.typicode.com/posts';
+    singleposturl='https://jsonplaceholder.typicode.com/posts/1';
     posts:Post[];
-    constructor(private http:HttpClient){
+    post:Post|undefined;
+    loading=false;
+    constructor(private http:HttpClient,
+      ){
         this.posts=[];
     }
     getAllPosts(){
@@ -32,5 +36,23 @@ export class PostComponent {
           
         }
       });
+    }
+
+    getPost(){
+      this.loading=true;
+        this.http.get<Post>(this.singleposturl).subscribe({
+          next:(data)=>{
+            console.log(data);
+            this.post=data;
+          },
+          error:(err)=>{
+              console.log(err);
+              
+          },
+          complete:()=>{
+            console.log("complete");
+            this.loading=false;
+          }
+        })
     }
 }

@@ -18,4 +18,10 @@
         </thead>
 
     </table>
+    <button (click)="getPost()">Get post</button>
+    <h1> loading is {{loading}}</h1>
+    <div *ngIf="loading">
+        <h2>Loding please wait</h2>
+    </div>
+
 </div>
