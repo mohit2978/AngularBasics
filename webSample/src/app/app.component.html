@@ -1,5 +1,9 @@
 <ul>
-    <li><a routerLink="/aboutus" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a></li>
+    <li><a [routerLink]="['/aboutus']" [queryParams]="{'name':name,'userId':id}">About us</a></li>
     <li><a routerLink="/contactus" routerLinkActive="active" ariaCurrentWhenActive="page">Contact us</a></li>
+    <li><a routerLink="/product" routerLinkActive="active" ariaCurrentWhenActive="page">Product</a></li>
 </ul>
 <router-outlet></router-outlet>
+<div class="footer">
+    <app-footer></app-footer>
+</div>
