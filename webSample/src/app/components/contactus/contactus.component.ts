@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivateGuard } from '../../guards/activate.guard';
 
 @Component({
   selector: 'app-contactus',

@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AboutusComponent implements OnInit{
   name='';
+  changesSaved=true;
   constructor(private activatedRoutes:ActivatedRoute){}
   ngOnInit(): void {
     this.activatedRoutes.queryParamMap.subscribe(mp=>{
