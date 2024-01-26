@@ -1,7 +1,7 @@
-import { Directive,OnInit,ElementRef,Input } from "@angular/core";
+import { Directive,OnInit,ElementRef,Input, } from "@angular/core";
 
 @Directive({
-    selector : "[cdCustom]"
+    selector : '[cdCustom]'
 })
 export class cdClass{
   @Input()  customClass:string|undefined;
