@@ -10,6 +10,7 @@ export class cdIfClass implements OnInit{
     }
     updateView(){
         if(this.csif==true){
+            debugger;
             this.container.createEmbeddedView(this.temp);
             console.log('this.csif',this.csif)
         }else{

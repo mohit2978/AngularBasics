@@ -1,0 +1,44 @@
+<div class="form-container">
+    <form [formGroup]="userform" (ngSubmit)="submitForm()">
+        <table>
+            <tbody>
+                <tr>
+                    <td> Name : </td>
+                    <td> <input name="name" placeholder="Enter name here" formControlName="name"/></td>
+                 </tr>
+                 <tr>
+                    <td>Email :</td>
+                    <td><input name="Email" placeholder="Enter email heere" formControlName="email" /></td>
+                 </tr>
+                 <tr>
+                    <td>About :</td>
+                    <td><input type="text" placeholder="Enter email heere" name="About" formControlName="about"/></td>
+                 </tr>
+                 <tr>
+                    <td>Gender :</td>
+                    <td>
+                        <input type="radio" name="gender" value="male" formControlName="gender">Male
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" value="female" formControlName="gender">FeMale
+                    </td>
+                 </tr>
+                 <tr>
+                    <td> city :</td>
+                    <td>
+                        <select name="City" id="" formControlName="city">
+                            <option value="Luck">Lucknow</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Chennai">Chennai</option>
+                        </select>
+                    </td>
+                 </tr>
+                 <tr>
+                    <button type="submit">Submit</button> &nbsp;
+                    <button type="reset">Reset</button>
+                 </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
