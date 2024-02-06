@@ -42,3 +42,53 @@
         </table>
     </form>
 </div>
+
+<div class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm1()">
+        <h2>Login Form</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Email :</td>
+                    <td><input type="text" name="Email" formControlName="email"></td>
+                </tr>
+                <tr>
+                    <td>Password :</td>
+                    <td><input type="text" name="Password" formControlName="pwd"></td>
+                </tr>
+                <tr formGroupName="adress">
+                    <td>Lane :<input type="text" name="street" formControlName="lane"></td>
+                    <td> Sector :<input type="text" name="sector" formControlName="sector"></td>
+                    <td> City :<input type="text" name="city" formControlName="city"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div formArrayName="interests">
+            <div *ngFor="let interest of getInterest().controls; let i=index">
+                <div [formGroupName]="i">
+                    {{i}}
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>InterestName :</td>
+                                <td><input type="text" formControlName="name"></td>
+                            </tr>
+                            <tr>
+                                <td>TimeInWeek :</td>
+                                <td><input type="text" formControlName="timeInWeeks"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button (click)="removeInterest(i)">Remove</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button type="submit"> Submit</button>
+    </form>
+    <h2> valid : {{loginForm.valid}} </h2>
+    <button (click)="addInterest()">Add interest</button>
+</div>
